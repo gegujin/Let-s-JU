@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JU유를 JU다</title>ju
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: url("dbtermMainbackground_upscaled.png") no-repeat center center fixed;
+        background-size: cover; /* 이미지 크기 조정 */
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #1a1a2e; /* 어두운 파란색 */
+        color: white;
+      }
+
+      header h1 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      header h1 img {
+        margin-right: 10px;
+      }
+
+      header .button-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      #search-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #location-input {
+        width: 600px;
+        height: 60px;
+        font-size: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      #search-button {
+        height: 60px;
+        font-size: 20px;
+        padding: 0 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0e71eb;
+        color: white;
+        cursor: pointer;
+      }
+
+      footer {
+        width: 100%;
+        padding: 10px;
+        background-color: #1a1a2e; /* 어두운 파란색 */
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="JU유를 JU다.png" alt="로고" width="150" height="100" />
+      </h1>
+      <div class="button-container">
+        <button id="signin-button" onclick="navigateToSignin()">마이페이지</button>
+        <button id="signup-button" onclick="navigateToSignup()">로그아웃</button>
+      </div>
+    </header>
+    <main>
+      <section id="search-section">
+        <form action="http://localhost/DBsearch.php" method="get">
+          <input type="text" id="location-input" name="location" placeholder="위치 입력" />
+          <button type="submit" id="search-button">검색</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 저렴한 주유소 추천</p>
+    </footer>
+
+    <script>
+      function navigateToSignin() {
+        window.location.href = "DBmypage.php";
+      }
+
+      function navigateToSignup() {
+        window.location.href = "DBmain.html";
+      }
+    </script>
+  </body>
+</html>
